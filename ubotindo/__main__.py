@@ -85,7 +85,7 @@ def get_readable_time(seconds: int) -> str:
 
 PM_START_TEXT = f"""
 Hey! Senang kita bisa bertemu.
-Perkenalkan saya adalah *{dispatcher.bot.first_name}*.
+Perkenalkan saya adalah *{dispatcher.bot.first_name}*
 Saya di sini bertugas untuk menjadi pengelola *Group* kamu agar lebih aman dan menyenangkan :)
 
 Ada pertanyaan tentang cara menggunakan saya? gunakan /help
@@ -109,7 +109,7 @@ buttons = [
 buttons += [[InlineKeyboardButton(text="Help & Commands ❔",
                                   url=f"t.me/{dispatcher.bot.username}?start=help"),
              InlineKeyboardButton(text="Support Channel 🎗️",
-                                  url="https://t.me/Anonymous_Channels"),
+                                  url="https://t.me/The_Channels"),
              ]]
 
 
