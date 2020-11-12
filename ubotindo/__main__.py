@@ -87,8 +87,6 @@ PM_START_TEXT = f"""
 Hey! Senang kita bisa bertemu.
 Perkenalkan saya adalah *{dispatcher.bot.first_name}*
 Partner found [Anonymous](https://t.me/XNewbie)
-/next — find a new partner
-/stop — stop this dialog
 
 Kirimi saya teks, tautan, gif, stiker, foto, video atau pesan suara dan saya akan meneruskannya secara anonim ke pesan Anda.
 
@@ -103,7 +101,7 @@ buttons = [
             text="Add me to your group",
             url="t.me/ufckbot?startgroup=true"),
         InlineKeyboardButton(
-            text="STRANGER",
+            text="STRANGER CHAT",
             url="https://t.me/StrangerChatGroup"),
     ]]
 
