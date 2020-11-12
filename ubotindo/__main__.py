@@ -102,7 +102,7 @@ buttons = [
             url="t.me/ufckbot?startgroup=true"),
         InlineKeyboardButton(
             text="STRANGER CHAT",
-            url="https://t.me/StrangerChatGroup"),
+            url="https://t.me/AnonimousChatGroup"),
     ]]
 
 
