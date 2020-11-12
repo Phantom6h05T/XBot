@@ -86,11 +86,13 @@ def get_readable_time(seconds: int) -> str:
 PM_START_TEXT = f"""
 Hey! Senang kita bisa bertemu.
 Perkenalkan saya adalah *{dispatcher.bot.first_name}*
-Saya di sini bertugas untuk menjadi pengelola *Group* kamu agar lebih aman dan menyenangkan :)
+Partner found [Anonymous](https://t.me/XNewbie)
+/next — find a new partner
+/stop — stop this dialog
+
+Kirimi saya teks, tautan, gif, stiker, foto, video atau pesan suara dan saya akan meneruskannya secara anonim ke pesan Anda.
 
 Ada pertanyaan tentang cara menggunakan saya? gunakan /help
-
-*I am managed by :* [➳͜͡❂ঔৣ⃕͜x͠N͜͡ᎬᎳᏴᏆᎬ࿐](https://t.me/XNewbie)
 
 Ingin menambahkan saya ke grup Anda? Cukup klik tombol di bawah!
 """
@@ -98,11 +100,11 @@ Ingin menambahkan saya ke grup Anda? Cukup klik tombol di bawah!
 buttons = [
     [
         InlineKeyboardButton(
-            text="Add to Group 👥",
-            url="t.me/XNewbieBot?startgroup=true"),
+            text="Add me to your group",
+            url="t.me/ufckbot?startgroup=true"),
         InlineKeyboardButton(
-            text="XBOT",
-            url="https://t.me/xbotgroup"),
+            text="STRANGER",
+            url="https://t.me/StrangerChatGroup"),
     ]]
 
 
@@ -118,43 +120,43 @@ Halo! Nama saya adalah *{dispatcher.bot.first_name}*.
 Saya bot manajemen grup modular dengan beberapa tambahan yang menyenangkan! Lihatlah berikut ini untuk mendapatkan gambaran tentang beberapa \
 hal-hal yang dapat saya bantu.
 *Main* commands available:
-+ /start: Mulai saya, dapat digunakan untuk memeriksa saya masih hidup atau tidak ...
-+ /help: PM adalah Anda pesan ini.
-+ /help <module name>: PM Anda info tentang modul itu.
-+ /settings: akan mengirimkan pengaturan Anda untuk semua modul yang didukung.
+>> /start: Mulai saya, dapat digunakan untuk memeriksa saya masih hidup atau tidak ...
+>> /help: PM adalah Anda pesan ini.
+>> /help <module name>: PM Anda info tentang modul itu.
+>> /settings: akan mengirimkan pengaturan Anda untuk semua modul yang didukung.
    - Dalam grup: akan mengarahkan Anda ke pm, dengan semua pengaturan obrolan itu.
- \ nKlik tombol di bawah ini untuk mendapatkan dokumentasi tentang modul tertentu!"""
+   Klik tombol di bawah ini untuk mendapatkan dokumentasi tentang modul tertentu!"""
 
 
 STAFF_HELP_STRINGS = """Hey there staff users. Nice to see you :)
 Ini semua perintah staf. Pengguna di atas memiliki akses perintah untuk semua perintah di bawah ini
 
 *OWNER*
-+ /broadcast: Kirim pesan siaran ke semua obrolan yang saya ikuti saat ini.
-+ /staffids: Dapatkan semua staf yang Anda miliki
-+ Mengirimkan alamat IP bot ke ssh in jika perlu (khusus PM).
+>> /broadcast: Kirim pesan siaran ke semua obrolan yang saya ikuti saat ini.
+>> /staffids: Dapatkan semua staf yang Anda miliki
+>> /ip: Mengirimkan alamat IP bot ke ssh in jika perlu (khusus PM).
 
 *DEV USERS*
-+ /gitpull: Tarik pembaruan terbaru.
-+ /reboot: Mulai ulang bot.
-+ /dbcleanup: Bersihkan database saya yang tidak valid.
-+ /leavemutedchats: Tinggalkan semua obrolan di mana saya tidak bisa mengirim pesan.
-+ /leave <chatid>: Katakan padaku untuk meninggalkan grup tertentu. (alias / leavechat / leavegroup).
-+ /stats: Daftar semua blacklist, filter, federation, gbans, dll dari semua grup.
-+ /getlink <chatid>: Dapatkan tautan undangan obrolan.
-+ /sysinfo: Dapatkan info sistem saya.
+>> /gitpull: Tarik pembaruan terbaru.
+>> /reboot: Mulai ulang bot.
+>> /dbcleanup: Bersihkan database saya yang tidak valid.
+>> /leavemutedchats: Tinggalkan semua obrolan di mana saya tidak bisa mengirim pesan.
+>> /leave <chatid>: Katakan padaku untuk meninggalkan grup tertentu. (alias / leavechat / leavegroup).
+>> /stats: Daftar semua blacklist, filter, federation, gbans, dll dari semua grup.
+>> /getlink <chatid>: Dapatkan tautan undangan obrolan.
+>> /sysinfo: Dapatkan info sistem saya.
 
 *SUDO USERS*
-+ /snipe <chatid> <string>: Beri tahu saya untuk mengirim pesan ke obrolan yang diberikan.
-+ /echo <string>: Seperti snipe tetapi pada obrolan saat ini.
-+ /chatlist: Dapatkan daftar obrolan yang saat ini saya ikuti.
-+ /ping: Mulailah tes ping.
-+ /speedtest: Mulai uji kecepatan dari server saya.
+>> /snipe <chatid> <string>: Beri tahu saya untuk mengirim pesan ke obrolan yang diberikan.
+>> /echo <string>: Seperti snipe tetapi pada obrolan saat ini.
+>> /chatlist: Dapatkan daftar obrolan yang saat ini saya ikuti.
+>> /ping: Mulailah tes ping.
+>> /speedtest: Mulai uji kecepatan dari server saya.
 
 *SUPPORT USERS*
-+ /gban <userid>: larangan global pengguna.
-+ /ungban <userid>: hapus pengguna yang saat ini dilarang.
-+ /gbanlist: Dapatkan daftar pengguna yang diblokir saat ini."""
+>> /gban <userid>: larangan global pengguna.
+>> /ungban <userid>: hapus pengguna yang saat ini dilarang.
+>> /gbanlist: Dapatkan daftar pengguna yang diblokir saat ini."""
 
 
 IMPORTED = {}
@@ -274,7 +276,7 @@ def start(update, context):
 
         else:
             update.effective_message.reply_photo(
-                "https://telegra.ph/file/2b47585bcf73d39dc75b2.jpg",
+                "https://telegra.ph/file/03b3bc81b45b0a3580d7e.jpg",
                 PM_START_TEXT,
                 reply_markup=InlineKeyboardMarkup(buttons),
                 parse_mode=ParseMode.MARKDOWN,
