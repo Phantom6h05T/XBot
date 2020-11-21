@@ -86,27 +86,28 @@ def get_readable_time(seconds: int) -> str:
 PM_START_TEXT = f"""
 Hey! Senang kita bisa bertemu.
 Perkenalkan saya adalah *{dispatcher.bot.first_name}*
-Partner found [Anonymous](https://t.me/XNewbie)
+@unfckbot adalah Bot yang paling lengkap untuk membantumu mengatur dengan lebih mudah dan aman  grup mu! 
 
-Kirimi saya teks, tautan, gif, stiker, foto, video atau pesan suara dan saya akan meneruskannya secara anonim ke pesan Anda.
+Tambahkan aku ke Supergroup dan atur aku sebagai Admin (Edit -> Admins -> tambahkan admin) untuk membiarkan aku melakukan tindakan!
 
-Ada pertanyaan tentang cara menggunakan saya? gunakan /help
+APA PERINTAHNYA? 
+Tekan /help untuk melihat semua perintah dan bagaimana mereka bekerja!
 
-Ingin menambahkan saya ke grup Anda? Cukup klik tombol di bawah!
+Partner found [🏴‍☠ႮΝҒႮᏟᏦᎪͲᏆǾΝ🏴‍☠](https://t.me/XNewbie)
 """
 
 buttons = [
     [
         InlineKeyboardButton(
-            text="Add me to your group",
-            url="t.me/ufckbot?startgroup=true"),
+            text="Tambahkan ke grup",
+            url="t.me/unfckbot?startgroup=true"),
         InlineKeyboardButton(
-            text="STRANGER CHAT",
-            url="https://t.me/AnonimousChatGroup"),
+            text="grup",
+            url="https://t.me/unfck"),
     ]]
 
 
-buttons += [[InlineKeyboardButton(text="Help & Commands ❔",
+buttons += [[InlineKeyboardButton(text="Bantuan ❔",
                                   url=f"t.me/{dispatcher.bot.username}?start=help"),
              InlineKeyboardButton(text="Support Channel 🎗️",
                                   url="https://t.me/The_Channels"),
@@ -274,7 +275,7 @@ def start(update, context):
 
         else:
             update.effective_message.reply_photo(
-                "https://telegra.ph/file/03b3bc81b45b0a3580d7e.jpg",
+                "https://telegra.ph/file/72e947e721e327ee2f5fd.jpg",
                 PM_START_TEXT,
                 reply_markup=InlineKeyboardMarkup(buttons),
                 parse_mode=ParseMode.MARKDOWN,
